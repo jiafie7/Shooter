@@ -1,0 +1,22 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooter</title>
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+    <script src="{% static 'js/dist/jquery-3.7.1.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/game.css' %}">
+    <link rel="icon" href="{% static 'image/settings/shooter.png' %}" type="image/png">
+</head>
+
+<body style="margin: 0">
+    <div id="game_123"></div>
+    <script type="module">
+        import { Game } from "{% static 'js/dist/game.js' %}";
+            $(document).ready(function(){
+                let game = new Game("game_123");
+            });
+    </script>
+</body>
+

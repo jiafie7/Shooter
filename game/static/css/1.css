@@ -1,0 +1,224 @@
+.game-settings {
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/image/menu/background.jpg");
+    background-size: cover; /* 调整背景图片以适应各种屏幕 */
+    background-position: center;
+    user-select: none;
+}
+
+.game-settings-login, .game-settings-register {
+    max-height: 50vh;
+    width: 20vw;
+    position: absolute; /* 使其更好地适应不同的屏幕尺寸 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 2vh 2vw; /* 增加内边距，使内容不那么紧凑 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影，增强视觉效果 */
+}
+
+.game-settings-title {
+    color: #fff;
+    font-size: 3vh;
+    text-align: center;
+    margin-bottom: 2vh;
+    font-weight: bold; /* 加粗标题字体 */
+}
+
+.game-settings-username,
+.game-settings-password,
+.game-settings-submit,
+.game-settings-acwing {
+    display: block;
+    height: 7vh;
+    margin-bottom: 2vh; /* 增加元素间的间距 */
+}
+
+.game-settings-item > input,
+.game-settings-item > button {
+    width: 90%;
+    padding: 1vh; /* 添加内边距，增强可读性 */
+    margin: auto;
+    display: block;
+    background-color: #333; /* 改变输入框背景色 */
+    border: none; /* 去掉边框 */
+    border-radius: 5px;
+    color: #fff;
+    font-size: 2vh; /* 调整字体大小 */
+}
+
+.game-settings-item > button {
+    background-color: #4CAF50;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 添加平滑的背景色过渡效果 */
+}
+
+.game-settings-item > button:hover {
+    background-color: #45a049; /* 鼠标悬停时的按钮背景色 */
+}
+
+
+#error-message {
+    color: red;
+    font-size: 2vh; /* 调整错误消息的字体大小 */
+    padding-left: 1vw;
+    height: 2vh;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 0;
+}
+
+#error-message.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.game-settings-option {
+    color: #fff;
+    font-size: 2vh;
+    float: right;
+    padding-right: 1vw;
+    cursor: pointer;
+}
+
+.game-settings-acwing > img {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    max-width: 100%; /* 确保图片在容器内响应良好 */
+}
+
+.game-settings-acwing > div {
+    color: #fff;
+    font-size: 1.5vh;
+    text-align: center;
+    margin-top: 1vh; /* 增加与图像的间距 */
+}
+
+.game-menu {
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/image/menu/background.jpg");
+    background-size: 100% 100%;
+    user-select: none;
+    font-family: Arial, sans-serif;
+}
+
+.game-menu-field {
+    width: 20vw;
+    position: relative;
+    top: 40%;
+    left: 20%;
+}
+
+.game-menu-field-item {
+    color: white;
+    height: 6vh;
+    width: 18vw;
+    font-size: 4vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 文字垂直居中 */
+    background-color: rgba(0, 0, 0, 0.8); /* 统一背景颜色 */
+    border-radius: 10px;
+    letter-spacing: 0.5vw;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 增加阴影 */
+    transition: transform 100ms, background-color 200ms;
+    margin-top: 20px; /* 增加选项按钮间的间距 */
+}
+
+.game-menu-field-item:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 215, 0, 0.8); /* 悬停时改变背景颜色 */
+}
+
+.game-menu-tooltip {
+    position: absolute;
+    top: -140%; /* 提示框位置调整，远离按钮 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-size: 2vh;
+    z-index: 1000;
+    text-align: center;
+}
+
+.game-menu-tooltip h3 {
+    font-size: 2.5vh;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.game-menu-tooltip ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.game-menu-tooltip ul li {
+    margin: 5px 0;
+}
+
+.game-menu-tooltip ul li strong {
+    color: #FFD700;
+}
+
+.game-playground {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    background-color: #808080; /* 使用HEX值来表示灰色 */
+}
+
+.game-playground > canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game-chat-field-history {
+    position: absolute;
+    top: 66%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 32%;
+    color: #fff;
+    font-size: 2vh;
+    padding: 5px;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* 添加背景色 */
+    border-radius: 5px; /* 添加圆角 */
+}
+
+.game-chat-field-history::-webkit-scrollbar {
+    width: 0; /* 隐藏滚动条 */
+}
+
+.game-chat-field-input {
+    position: absolute;
+    top: 86%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 3vh;
+    color: #fff;
+    font-size: 2vh;
+    background-color: rgba(222, 225, 230, 0.2);
+    border: none; /* 去掉边框 */
+    border-radius: 5px; /* 添加圆角 */
+    padding-left: 1vh; /* 添加内边距 */
+}
+

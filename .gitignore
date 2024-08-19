@@ -1,0 +1,16 @@
+.DS_Store
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.log
+*.pot
+*.pyc
+*.so
+*.pyo
+*.orig
+*.db
+*.sqlite3
+*.mo
+*.pot
